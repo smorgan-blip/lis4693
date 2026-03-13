@@ -1,0 +1,43 @@
+import random
+import csv
+
+topics = [
+    "economy","technology","health","climate","education","space","energy",
+    "agriculture","transport","artificial intelligence","cybersecurity",
+    "public policy","sports science","medicine","environment","finance",
+    "startups","robotics","quantum computing","biology"
+]
+
+verbs = [
+    "explores","examines","highlights","analyzes",
+    "reveals","tracks","reviews","explains","discusses"
+]
+
+angles = [
+    "recent developments",
+    "new research findings",
+    "policy debates",
+    "industry trends",
+    "community impacts",
+    "future outlook",
+    "scientific progress",
+    "market shifts"
+]
+
+with open("news_dataset.csv", "w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    
+    # header
+    writer.writerow(["Class Index", "Title", "Description"])
+    
+    for i in range(1, 501):
+        topic = random.choice(topics)
+        verb = random.choice(verbs)
+        angle = random.choice(angles)
+
+        title = f"{topic.title()} Update {i:03d}"
+        description = f"This article {verb} {angle} in {topic} and describes key events data and expert perspectives shaping the topic today."
+
+        writer.writerow(["", title, description])
+
+print("CSV file with 500 rows created: news_dataset.csv")
