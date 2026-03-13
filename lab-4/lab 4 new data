@@ -1,43 +1,201 @@
-import random
-import csv
-
-topics = [
-    "economy","technology","health","climate","education","space","energy",
-    "agriculture","transport","artificial intelligence","cybersecurity",
-    "public policy","sports science","medicine","environment","finance",
-    "startups","robotics","quantum computing","biology"
-]
-
-verbs = [
-    "explores","examines","highlights","analyzes",
-    "reveals","tracks","reviews","explains","discusses"
-]
-
-angles = [
-    "recent developments",
-    "new research findings",
-    "policy debates",
-    "industry trends",
-    "community impacts",
-    "future outlook",
-    "scientific progress",
-    "market shifts"
-]
-
-with open("news_dataset.csv", "w", newline="", encoding="utf-8") as f:
-    writer = csv.writer(f)
-    
-    # header
-    writer.writerow(["Class Index", "Title", "Description"])
-    
-    for i in range(1, 501):
-        topic = random.choice(topics)
-        verb = random.choice(verbs)
-        angle = random.choice(angles)
-
-        title = f"{topic.title()} Update {i:03d}"
-        description = f"This article {verb} {angle} in {topic} and describes key events data and expert perspectives shaping the topic today."
-
-        writer.writerow(["", title, description])
-
-print("CSV file with 500 rows created: news_dataset.csv")
+Class Index,Title,Description
+,Global Leaders Meet to Discuss Economic Stability,Government officials gather to address economic challenges and explore strategies for sustainable global growth.
+,New Artificial Intelligence Tool Improves Medical Diagnosis,Researchers unveil an AI system designed to assist doctors in identifying diseases more quickly and accurately.
+,Scientists Warn of Accelerating Arctic Ice Melt,Climate experts report that rising global temperatures are contributing to faster melting of Arctic sea ice.
+,Education Reform Plan Gains Support from Lawmakers,A proposed reform package aims to improve school funding teacher training and student performance.
+,Private Space Company Announces Lunar Exploration Mission,A commercial space company reveals plans to send scientific equipment to the Moon within the next decade.
+,Renewable Energy Investments Reach Record Levels,Energy companies increase spending on solar wind and other renewable energy technologies.
+,Farmers Adopt Smart Irrigation Technology,Advanced irrigation systems help agricultural producers conserve water and improve crop yields.
+,Cities Introduce Smart Traffic Management Systems,Urban planners deploy data-driven systems to reduce traffic congestion and improve road safety.
+,Cybersecurity Experts Highlight Rising Online Threats,Security specialists warn businesses about increasing risks from cyber attacks and data breaches.
+,Global Markets React to Changes in Trade Policy,Investors monitor shifting economic conditions as governments adjust international trade rules.
+,Researchers Study Long-Term Effects of Air Pollution,Scientists examine how prolonged exposure to pollution affects public health.
+,Tech Startups Drive Innovation in Robotics,Entrepreneurs develop robotic systems designed to improve efficiency in manufacturing and logistics.
+,Healthcare Providers Expand Telemedicine Services,Medical institutions adopt digital consultations to reach patients in remote areas.
+,Environmental Groups Push for Stronger Climate Action,Advocacy organizations urge governments to implement policies that reduce greenhouse gas emissions.
+,Universities Launch Programs in Artificial Intelligence,Educational institutions introduce new courses focused on machine learning and data science.
+,Astronomers Discover New Exoplanet in Nearby Star System,Scientists detect a planet outside the solar system that may offer clues about planetary formation.
+,Wind Energy Projects Expand Across Rural Regions,Developers build new wind farms to support growing demand for renewable electricity.
+,Scientists Develop Biodegradable Packaging Materials,Researchers create environmentally friendly packaging that breaks down naturally over time.
+,Electric Vehicle Adoption Continues to Increase,Consumers show growing interest in electric transportation options.
+,Public Health Officials Promote Preventive Care Programs,Health organizations encourage routine screenings and wellness initiatives.
+,Global Supply Chains Adapt to Changing Demand,Manufacturers adjust production and shipping strategies to respond to market shifts.
+,Artificial Intelligence Helps Improve Weather Forecasting,Machine learning models enhance the accuracy of short term weather predictions.
+,Ocean Scientists Study Impact of Plastic Pollution,Marine researchers investigate how plastic waste affects ocean ecosystems.
+,Education Technology Platforms Transform Online Learning,New digital tools provide interactive experiences for students studying remotely.
+,Satellite Technology Expands Global Internet Access,Communications companies launch satellites to improve connectivity worldwide.
+,Urban Development Projects Focus on Sustainability,City planners emphasize environmentally friendly design in new infrastructure projects.
+,Researchers Explore Advances in Quantum Computing,Scientists investigate computing systems capable of solving complex problems faster.
+,Medical Breakthrough Offers Hope for Rare Disease Patients,Doctors report progress in treatments targeting previously untreatable conditions.
+,Climate Scientists Monitor Rising Sea Levels,Studies show coastal regions may face increased flooding risks in the coming decades.
+,Agricultural Innovation Helps Farmers Increase Efficiency,New technologies support better crop monitoring and farm management.
+,Transportation Officials Consider High Speed Rail Expansion,Infrastructure planners evaluate rail systems designed for faster travel between cities.
+,Cybersecurity Researchers Detect New Malware Strains,Experts identify malicious software targeting corporate networks.
+,Financial Analysts Predict Continued Market Volatility,Investors prepare for uncertainty amid shifting economic indicators.
+,Scientists Investigate Renewable Hydrogen Energy,Research teams examine hydrogen as a potential clean energy source.
+,Digital Payment Systems Gain Popularity Worldwide,Consumers increasingly adopt contactless and mobile payment solutions.
+,Space Telescope Captures Detailed Images of Distant Galaxies,Astronomers analyze new observations revealing structures in deep space.
+,Education Experts Encourage Lifelong Learning Programs,Institutions promote ongoing education to help workers adapt to new industries.
+,Environmental Conservation Efforts Protect Wildlife Habitats,Organizations work to preserve ecosystems threatened by human activity.
+,Artificial Intelligence Assists in Drug Discovery,Pharmaceutical researchers use machine learning to identify potential medications.
+,Energy Storage Breakthrough Improves Battery Efficiency,Scientists design new battery technologies for renewable energy storage.
+,Urban Air Quality Studies Reveal Pollution Patterns,Researchers analyze data showing how pollution levels vary across cities.
+,Tech Industry Debates Regulation of Emerging Technologies,Policy makers and companies discuss possible rules governing advanced technologies.
+,Scientists Map Previously Unknown Ocean Regions,Exploration missions gather new data about unexplored parts of the seafloor.
+,Global Tourism Industry Shows Signs of Recovery,Travel demand rises as destinations reopen and tourism resumes.
+,Robotics Systems Assist Surgeons in Complex Operations,Hospitals adopt robotic tools that support precision during surgery.
+,Researchers Examine Links Between Diet and Health,Studies investigate how nutritional choices influence long term wellbeing.
+,Renewable Power Grids Improve Energy Distribution,Smart grid systems help balance electricity supply from multiple sources.
+,Climate Adaptation Strategies Help Communities Prepare,Local governments implement plans to manage extreme weather risks.
+,Autonomous Vehicle Testing Expands in Urban Areas,Companies conduct controlled trials of self driving cars in major cities.
+,Scientists Explore New Methods for Carbon Capture,Research focuses on technologies that remove carbon dioxide from the atmosphere.
+,Global Trade Talks Resume After Economic Slowdown,International negotiators meet to discuss trade agreements aimed at stabilizing global markets.
+,Researchers Introduce Breakthrough in Solar Panel Efficiency,Engineers develop a new solar cell design capable of producing more electricity from sunlight.
+,Public Health Officials Monitor Emerging Virus Strain,Health agencies increase surveillance efforts after identifying a newly detected virus variant.
+,Major Technology Firms Invest in Advanced Chip Manufacturing,Companies expand semiconductor production to address global supply shortages.
+,Scientists Study Effects of Drought on Agriculture,New research examines how prolonged drought conditions impact crop production.
+,Education Leaders Promote New Teacher Training Programs,School administrators introduce initiatives designed to improve classroom instruction.
+,Commercial Space Industry Expands Satellite Services,Private companies launch new satellites to improve communication and Earth monitoring.
+,Environmental Scientists Track Changes in Forest Ecosystems,Researchers analyze how climate shifts are altering forest biodiversity.
+,Electric Vehicle Charging Networks Grow Nationwide,Infrastructure projects increase access to charging stations for electric vehicles.
+,Financial Markets Respond to Central Bank Policy Updates,Investors react as monetary authorities announce changes to interest rates.
+,Robotics Technology Improves Warehouse Logistics,Automated systems help companies manage inventory and shipping operations.
+,Medical Researchers Develop New Diagnostic Test,Scientists create a faster method for detecting infectious diseases.
+,Urban Planners Focus on Sustainable Housing Solutions,Cities explore environmentally friendly designs for future housing developments.
+,Artificial Intelligence Tools Assist Climate Research,Machine learning models help scientists analyze large climate datasets.
+,Agricultural Scientists Test Climate Resistant Crops,New crop varieties are designed to withstand extreme weather conditions.
+,Transportation Officials Propose Expansion of Public Transit,Government planners evaluate new bus and rail routes for growing cities.
+,Tech Entrepreneurs Launch Innovative Startup Platforms,New companies introduce platforms aimed at supporting digital businesses.
+,Marine Biologists Study Decline of Coastal Fish Populations,Researchers investigate environmental factors affecting fisheries.
+,Energy Analysts Examine Future of Nuclear Power,Experts discuss the role nuclear energy may play in reducing emissions.
+,Schools Introduce Coding Programs for Young Students,Educational programs encourage children to learn programming skills early.
+,Global Health Organizations Coordinate Disease Prevention Efforts,International agencies collaborate on strategies to reduce outbreak risks.
+,Scientists Explore Potential of Fusion Energy,Research teams investigate experimental reactors capable of producing clean energy.
+,Digital Security Experts Warn About Phishing Campaigns,Cybersecurity professionals advise users to remain cautious of fraudulent emails.
+,Climate Researchers Analyze Record Breaking Heatwaves,Studies examine the increasing frequency of extreme temperature events.
+,Medical Experts Emphasize Importance of Vaccination Programs,Doctors highlight vaccines as a critical tool for preventing disease.
+,Space Scientists Plan Mission to Study Asteroids,Researchers design spacecraft intended to collect data from near Earth asteroids.
+,Financial Technology Companies Expand Mobile Banking Services,Digital platforms enable users to manage finances through smartphone applications.
+,Researchers Investigate Microplastic Pollution in Rivers,Environmental studies measure the spread of microscopic plastic particles.
+,Artificial Intelligence Helps Detect Financial Fraud,Banks deploy machine learning systems to identify suspicious transactions.
+,Renewable Energy Projects Bring Jobs to Rural Communities,New wind and solar facilities contribute to local economic growth.
+,Urban Transportation Programs Encourage Bicycle Use,Cities develop bike friendly infrastructure to reduce traffic congestion.
+,Scientists Discover New Species in Tropical Rainforest,Biologists document previously unknown organisms during field research.
+,Healthcare Systems Adopt Digital Patient Records,Hospitals transition to electronic systems that improve medical data management.
+,Researchers Examine Impact of Sleep on Mental Health,Studies suggest sleep patterns may strongly influence emotional wellbeing.
+,Technology Conference Showcases Emerging Innovations,Developers present new ideas in computing robotics and digital services.
+,Environmental Agencies Launch Coastal Protection Plans,Programs focus on safeguarding communities from rising sea levels.
+,Medical Breakthrough Offers New Hope for Diabetes Treatment,Clinical researchers report progress in therapies targeting blood sugar regulation.
+,Engineers Develop Smart Sensors for Infrastructure Monitoring,Advanced sensors track structural conditions in bridges and buildings.
+,Climate Policy Discussions Continue at International Summit,Delegates negotiate agreements aimed at reducing global carbon emissions.
+,Space Exploration Programs Inspire Student Interest in Science,Educational initiatives highlight careers in astronomy and engineering.
+,Digital Media Platforms Expand Global Content Distribution,Streaming services invest in producing and sharing international programming.
+,Public Transit Systems Introduce Contactless Payment Options,Transportation networks adopt digital payment technologies for commuters.
+,Scientists Study Migration Patterns of Arctic Wildlife,Tracking data reveals how animals adapt to environmental change.
+,Energy Storage Innovations Support Renewable Power Grids,Improved battery systems help stabilize electricity from renewable sources.
+,Universities Collaborate on Global Research Projects,Academic institutions partner to address complex scientific challenges.
+,Robotics Engineers Build Machines for Disaster Response,Rescue teams test robots designed to operate in hazardous environments.
+,Researchers Explore Benefits of Urban Green Spaces,Studies show parks and vegetation improve public health in cities.
+,Technology Companies Expand Investment in Cybersecurity,Businesses strengthen defenses against increasingly complex cyber threats.
+,Medical Teams Use Data Analytics to Improve Patient Care,Healthcare providers analyze data to enhance treatment planning.
+,Scientists Investigate Methods to Restore Coral Reefs,Marine restoration projects aim to rebuild damaged reef ecosystems.
+,Government Announces New Infrastructure Investment Plan,Officials reveal a long term plan aimed at modernizing roads bridges and public facilities.
+,Scientists Develop Method to Remove Carbon from Air,Researchers test technology designed to capture carbon dioxide directly from the atmosphere.
+,Technology Companies Collaborate on Open Source Software,Several firms join forces to build shared software tools for developers worldwide.
+,Healthcare Workers Advocate for Improved Hospital Staffing,Medical professionals call for policy changes to address staffing shortages in hospitals.
+,Researchers Study Impact of Urban Heat Islands,Scientists analyze how dense city environments trap heat and affect residents.
+,International Summit Focuses on Global Food Security,World leaders discuss strategies to ensure stable food supplies for growing populations.
+,Artificial Intelligence Improves Disaster Prediction Models,Advanced algorithms help researchers forecast natural disasters more accurately.
+,Electric Aviation Projects Move Closer to Commercial Use,Aircraft manufacturers test electric powered planes designed to reduce emissions.
+,Marine Scientists Investigate Deep Ocean Currents,New research explores how underwater currents influence global climate systems.
+,Financial Experts Discuss Future of Digital Banking,Industry leaders examine emerging technologies shaping modern financial services.
+,New Study Highlights Benefits of Urban Tree Planting,Environmental researchers report that expanding tree coverage improves air quality.
+,Technology Startups Introduce Smart Home Innovations,Entrepreneurs develop devices that automate lighting heating and security systems.
+,Scientists Examine Long Term Effects of Microplastics,Research teams study how tiny plastic particles affect ecosystems and wildlife.
+,Transportation Officials Test Autonomous Bus Systems,City transit agencies experiment with driverless buses on selected routes.
+,Researchers Develop Wearable Devices for Health Monitoring,New wearable technology tracks heart rate activity levels and other vital signs.
+,Space Scientists Plan Telescope for Studying Distant Stars,Astronomers design a powerful instrument capable of observing faint cosmic objects.
+,Climate Researchers Evaluate Coastal Flood Protection,Studies focus on new engineering approaches to defend coastal cities.
+,Global Shipping Industry Adopts Greener Fuel Options,Shipping companies explore alternative fuels to reduce environmental impact.
+,Education Programs Encourage Students to Study Engineering,Schools promote science and engineering careers through specialized programs.
+,Medical Researchers Investigate New Antibiotic Compounds,Scientists search for drugs capable of treating antibiotic resistant bacteria.
+,Energy Experts Analyze Growth of Offshore Wind Farms,Large scale offshore projects promise to generate significant renewable power.
+,Urban Designers Promote Walkable City Neighborhoods,City planners prioritize pedestrian friendly streets and accessible public spaces.
+,Scientists Explore Advances in Brain Imaging Technology,New scanning methods help researchers better understand neural activity.
+,Digital Privacy Advocates Call for Stronger Data Protections,Organizations urge lawmakers to strengthen consumer privacy regulations.
+,Researchers Study Wildlife Adaptation to Climate Change,Biologists examine how animals adjust to shifting environmental conditions.
+,Financial Technology Firms Expand Peer to Peer Payment Services,Mobile apps allow users to transfer money instantly between accounts.
+,Artificial Intelligence Systems Assist Agricultural Planning,AI models help farmers predict crop performance and optimize planting schedules.
+,Public Transportation Systems Add Electric Bus Fleets,Cities replace diesel buses with electric vehicles to reduce emissions.
+,Scientists Discover Promising New Battery Materials,Research suggests new materials could extend battery lifespan and capacity.
+,Healthcare Organizations Expand Community Wellness Programs,Local initiatives encourage exercise nutrition and preventive health care.
+,Satellite Data Helps Monitor Global Deforestation,Environmental groups track forest loss using advanced satellite imagery.
+,Researchers Study Role of Oceans in Climate Regulation,Oceanographers examine how sea currents influence global weather patterns.
+,Technology Firms Develop Tools for Remote Collaboration,New software platforms support teamwork across distributed workplaces.
+,Education Officials Introduce Curriculum Focused on Digital Skills,Schools update lessons to include coding cybersecurity and data literacy.
+,Scientists Investigate Sustainable Water Desalination Methods,Engineers design systems to convert seawater into fresh drinking water efficiently.
+,International Organizations Launch Wildlife Protection Effort,Global conservation groups coordinate actions to protect endangered species.
+,Medical Teams Research New Approaches to Pain Management,Studies evaluate therapies that reduce reliance on traditional medications.
+,Space Agencies Test Landing Systems for Future Missions,Engineers experiment with technology designed for safe spacecraft landings.
+,Environmental Researchers Examine Soil Health Trends,Studies analyze how soil conditions influence agricultural productivity.
+,Urban Innovation Labs Develop Smart City Solutions,Researchers test technology that improves traffic energy use and public safety.
+,Economists Analyze Changing Patterns in Global Trade,Reports explore how shifting supply chains affect economic relationships.
+,Scientists Study Atmospheric Changes in Polar Regions,Research flights collect data about temperature and wind conditions near the poles.
+,Digital Education Platforms Expand Access to Learning,Online systems allow students worldwide to participate in academic courses.
+,Engineers Design Bridges Using Advanced Materials,New construction techniques improve structural durability and safety.
+,Public Health Officials Promote Healthy Lifestyle Campaigns,Programs encourage communities to adopt balanced diets and regular exercise.
+,Researchers Explore Robotics for Environmental Cleanup,Robots are being designed to collect waste and pollutants in difficult locations.
+,Climate Scientists Examine Impact of Melting Glaciers,Studies investigate how shrinking glaciers affect freshwater resources.
+,Technology Industry Invests in Next Generation Networks,Companies develop faster communication infrastructure to support future devices.
+,Scientists Research Natural Methods for Pest Control,Biological solutions offer alternatives to traditional agricultural pesticides.
+,Energy Policy Discussions Focus on Sustainable Development,Leaders debate strategies for balancing economic growth with environmental protection.
+,International Researchers Launch Global Climate Study,Scientists from multiple countries collaborate on a large study examining long term climate patterns.
+,Technology Firms Reveal New Advances in Cloud Computing,Companies introduce improved cloud infrastructure designed to handle growing data demands.
+,Healthcare Leaders Discuss Future of Digital Medicine,Medical experts explore how technology can transform patient care and hospital systems.
+,Scientists Discover New Insights into Ocean Ecosystems,Marine research uncovers previously unknown interactions between ocean species.
+,Education Officials Expand Access to Online Degree Programs,Universities introduce flexible programs that allow students to complete degrees remotely.
+,Renewable Energy Projects Transform Rural Communities,New wind and solar developments bring jobs and economic growth to remote regions.
+,Artificial Intelligence Helps Detect Early Signs of Disease,Researchers develop machine learning models that assist doctors with early diagnosis.
+,Urban Planners Introduce Green Building Standards,Cities adopt environmental guidelines for new construction projects.
+,Financial Analysts Monitor Shifts in Global Investment Trends,Market experts evaluate how international investors are responding to economic changes.
+,Space Scientists Prepare for Next Generation Telescope Launch,Astronomers finalize plans for a powerful telescope designed to observe distant galaxies.
+,Environmental Groups Promote Restoration of Wetland Habitats,Conservation projects focus on protecting wetlands and improving biodiversity.
+,Technology Developers Create More Efficient Data Centers,New engineering designs aim to reduce energy consumption in large computing facilities.
+,Scientists Study Impact of Changing Rainfall Patterns,Researchers examine how altered precipitation affects agriculture and ecosystems.
+,Public Transportation Authorities Expand Rail Services,Transit agencies plan new rail lines to improve mobility in growing cities.
+,Medical Researchers Investigate New Vaccine Delivery Methods,Scientists test innovative approaches to make vaccines easier to distribute.
+,Economists Analyze Impact of Automation on Employment,Studies explore how automation technologies may reshape the future workforce.
+,Digital Security Specialists Address Growing Identity Theft Risks,Experts warn consumers about emerging threats related to online identity fraud.
+,Researchers Examine Benefits of Renewable Energy Storage,New battery systems help stabilize electricity generated from renewable sources.
+,Global Tourism Industry Invests in Sustainable Travel Initiatives,Travel companies promote environmentally responsible tourism practices.
+,Scientists Explore Potential of Ocean Based Renewable Energy,Researchers investigate technologies that harness energy from tides and waves.
+,Education Programs Encourage Student Participation in Science Fairs,Schools promote hands on learning through national and regional competitions.
+,Tech Companies Develop Tools for Advanced Data Analytics,New platforms help organizations interpret complex datasets more efficiently.
+,Climate Experts Highlight Importance of Coastal Protection,Studies emphasize infrastructure improvements needed to protect coastal communities.
+,Medical Institutions Expand Research into Neurodegenerative Diseases,Scientists work to better understand conditions affecting brain health.
+,Urban Communities Promote Local Food Production,City residents establish community gardens and urban farming initiatives.
+,Scientists Test New Methods for Recycling Electronic Waste,Researchers design processes to recover valuable materials from discarded electronics.
+,Artificial Intelligence Systems Improve Language Processing Tools,Advanced algorithms enhance translation and speech recognition capabilities.
+,Energy Companies Evaluate Future of Hydrogen Fuel Technology,Industry leaders assess hydrogen as an alternative energy source.
+,Researchers Document Changes in Mountain Ecosystems,Studies reveal how warming temperatures are affecting alpine environments.
+,Financial Technology Innovations Simplify Small Business Payments,New digital tools help entrepreneurs manage transactions and accounting.
+,Scientists Study Migration Routes of Endangered Birds,Tracking technology helps researchers understand bird movement patterns.
+,Education Leaders Introduce Programs Supporting STEM Careers,Schools encourage students to pursue careers in science technology engineering and mathematics.
+,Space Exploration Teams Test Robotic Surface Vehicles,Engineers design robotic vehicles for exploring planetary surfaces.
+,Environmental Monitoring Systems Improve Air Quality Tracking,New sensors provide detailed information about pollution levels in cities.
+,Healthcare Providers Adopt AI Assisted Imaging Systems,Hospitals implement tools that assist radiologists in analyzing scans.
+,Global Organizations Work to Improve Disaster Preparedness,International programs strengthen response strategies for natural disasters.
+,Researchers Explore Advances in Sustainable Construction Materials,New materials aim to reduce the environmental impact of buildings.
+,Transportation Experts Study Future of High Speed Rail Networks,Plans are evaluated for expanding rapid rail transportation between major regions.
+,Scientists Investigate Links Between Climate Change and Wildlife Behavior,Studies analyze how changing climates affect animal migration and reproduction.
+,Technology Industry Focuses on Secure Internet Infrastructure,Companies work to strengthen protection for global digital communication systems.
+,Medical Scientists Develop New Approaches to Personalized Medicine,Researchers create treatments tailored to individual patient genetics.
+,Urban Development Projects Emphasize Public Green Spaces,City planners incorporate parks and open spaces into development plans.
+,Researchers Analyze Economic Effects of Remote Work Trends,Studies examine how remote work influences productivity and urban economies.
+,Renewable Energy Engineers Improve Offshore Wind Technology,New turbine designs increase energy production in offshore environments.
+,Scientists Examine Health Benefits of Regular Physical Activity,Research highlights positive effects of exercise on long term health outcomes.
+,Digital Platforms Expand Access to Global Education Resources,Online systems provide educational content to learners worldwide.
+,Environmental Scientists Investigate Freshwater Conservation Strategies,Programs focus on protecting lakes rivers and groundwater resources.
+,Artificial Intelligence Applications Assist Scientific Research,Machine learning tools help scientists process large volumes of experimental data.
+,Public Policy Experts Debate Regulation of Emerging Technologies,Government officials consider new laws addressing rapidly developing innovations.
+,Researchers Explore Future of Sustainable Urban Transportation,Studies focus on reducing emissions through improved transit and electric mobility.
